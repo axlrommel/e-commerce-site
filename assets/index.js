@@ -1,9 +1,13 @@
 var cardsHolder = document.getElementById('cardsPlaceholder');
-document.getElementById('previous').disabled = true;
 var pageItemsSelector = document.getElementById('itemsPerPage');
 
 var itemList = [];
 var currentPage = 1;
+
+function getItemsPerPage() {
+  var itemsPerPage = document.getElementById('itemsPerPage').value;
+  return itemsPerPage;
+}
 
 function loadCard(item) {
   var section = document.createElement('div');
@@ -57,11 +61,6 @@ function loadCards() {
     });
 }
 
-function getItemsPerPage() {
-  var itemsPerPage = document.getElementById('itemsPerPage').value;
-  return itemsPerPage;
-}
-
 function gotoPage(move) {
   currentPage = currentPage + move;
   refreshList(
@@ -93,17 +92,3 @@ function changePageItems() {
 }
 
 pageItemsSelector.addEventListener('change', changePageItems);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
