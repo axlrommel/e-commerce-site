@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body onload="loadCards()">
+    <h1>Products</h1>
+    <button onclick="sortAscending()">Sort By Price Ascending</button>
+    <button onclick="sortDescending()">Sort By Price Descending</button>
+    <label>Number of Items Per Page</label>
+    <select id="itemsPerPage">
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="20">20</option>
+    </select>
+    <button onclick="gotoPage(1)" id="next">Next Page</button>
+    <button onclick="gotoPage(-1)" id="previous">Previous Page</button>
+    <div id="cardsPlaceholder"></div>
+    <script src="./assets/index.js"></script>
+  </body>
+</html>
