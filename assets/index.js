@@ -25,7 +25,7 @@ function loadCard(item) {
 }
 
 function checkButtons() {
-  if (Math.ceil(itemList.length / getItemsPerPage()) === 1) {
+  if (itemList.length <= getItemsPerPage()) {
     document.getElementById('previous').disabled = true;
     document.getElementById('next').disabled = true;
   } else if (currentPage === 1) {
@@ -60,6 +60,8 @@ function loadCards() {
       refreshList(0, getItemsPerPage());
     });
 }
+
+
 
 function gotoPage(move) {
   currentPage = currentPage + move;
